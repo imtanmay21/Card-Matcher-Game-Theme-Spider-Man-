@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #f4f4f4;
+    --secondary_color: #333;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    --highlight-color: #FB3640;
+}
+
+/* Utilities */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Text */
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/* Containers */
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+}
+
+.card {
+    transition: all 0.4s ease ;
+    border-radius: 10px;
+    color: var(--secondary_color);
+    cursor: pointer;
+    height: 160px;
+    width: 100px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    background: var(--secondary_color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    box-shadow: inset 0px 0px 0px 2000px var(--overlay-color);
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: url('.//img/btn-bg.jpg') center center/cover no-repeat;
+}
+
+/* Styling */
+#main {
+    height: 100vh;
+    overflow: auto;
+    background: url('./img/main-bg.jpg') center center/cover no-repeat;
+    position: relative;
+    box-shadow: inset 0px 0px 0 2000px var(--overlay-color);
+}
+
+
+#main * {
+    z-index: 3;
+}
+
+.play-again {
+    position: absolute;
+    z-index: 5;
+    align-self: center;
+    width: 400px;
+    height: 200px;
+    background: var(--primary-color);
+    color: var(--secondary_color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.not-active {
+    display: none;
+}
+
+/* Images */
+.amazing {
+    background: url('./img/amazing.jpg') center center/cover no-repeat;
+}
+
+.miles {
+    background: url("./img/miles.jpg") center center/cover no-repeat;
+}
+
+.scarlet {
+    background: url('./img/scarlet.jpg') center center/cover no-repeat;
+}
+
+.noir {
+    background: url('./img/noir.jpg') center center/cover no-repeat;
+}
+
+.s-2099 {
+    background: url('./img/s-2099.jpg') center center/cover no-repeat;
+}
+
+.future {
+    background: url('./img/future.jpg') center center/cover no-repeat;
+}
+
+.logo {
+    background: url('./img/logo.jpg') center center/cover no-repeat;
+}
+
+@media screen and (max-width: 500px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    /* Utilities */
+    .cards-container {
+        width: 280px;
+        grid-template-columns: auto auto auto;
+    }
+
+    .card {
+        height: 120px;
+        width: 80px;
+    }
+    
+
+    /* Styling */
+    .play-again {
+        width: 300px;
+        height: 150px;
+    }
+    
+}
